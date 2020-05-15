@@ -1,0 +1,42 @@
+{
+    "name": "dashingunique/shier-erp-library",
+    "description": "erp",
+    "type": "src",
+    "license": "Apache-2.0",
+    "authors": [
+        {
+            "name": "dashing unique",
+            "email": "1107842285@qq.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "php": ">=7.4",
+        "ext-gd": "*",
+        "ext-curl": "*",
+        "ext-json": "*",
+        "ext-iconv": "*",
+        "topthink/framework": "^6.0.0",
+        "topthink/think-orm": "^2.0",
+        "topthink/think-multi-app": "^1.0",
+        "topthink/think-queue": "^3.0",
+        "yupoxiong/region": "^1.1",
+        "hashids/hashids": "^4.0",
+        "thans/tp-jwt-auth": "^1.0"
+    },
+    "autoload": {
+        "files": [
+            "src/common.php"
+        ],
+        "psr-4": {
+            "think\\admin\\": "src"
+        }
+    },
+    "extra": {
+        "think": {
+            "services": [
+                "erp\\service\\ErpService"
+            ]
+        }
+    }
+}
