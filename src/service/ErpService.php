@@ -12,6 +12,7 @@
 namespace erp\service;
 
 use erp\facade\Erp;
+use erp\Request;
 use think\Service;
 use erp\command\logic;
 use erp\command\Validate;
@@ -25,6 +26,7 @@ class ErpService extends Service
      */
     public function register()
     {
+        $this->app->bind('think\Request', Request::class);
         $langPath = Erp::getErpLangPath();
         // 加载中文语言包
         $this->app->lang->load($langPath.'zh-cn.php', 'zh-cn');
