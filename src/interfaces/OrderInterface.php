@@ -11,7 +11,6 @@ interface OrderInterface
     /**
      * 创建订单
      * @param  array  $param
-     * @param  array  $arg
      * @return mixed
      */
     public function createOrder(array $param);

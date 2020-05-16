@@ -12,6 +12,7 @@
     "minimum-stability": "dev",
     "require": {
         "php": ">=7.4",
+        "ext-password": "*",
         "ext-json": "*",
         "topthink/framework": "^6.0.0",
         "topthink/think-orm": "^2.0",
@@ -21,7 +22,8 @@
         "hashids/hashids": "^4.0",
         "thans/tp-jwt-auth": "^1.0",
         "symfony/filesystem": "^5.1@dev",
-        "symfony/class-loader": "^3.4@dev"
+        "symfony/class-loader": "^3.4@dev",
+        "ramsey/uuid": "^4.0@dev"
     },
     "autoload": {
         "files": [
