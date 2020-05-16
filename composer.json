@@ -19,7 +19,9 @@
         "topthink/think-queue": "^3.0",
         "yupoxiong/region": "^1.1",
         "hashids/hashids": "^4.0",
-        "thans/tp-jwt-auth": "^1.0"
+        "thans/tp-jwt-auth": "^1.0",
+        "symfony/filesystem": "^5.1@dev",
+        "symfony/class-loader": "^3.4@dev"
     },
     "autoload": {
         "files": [

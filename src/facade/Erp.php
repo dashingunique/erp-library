@@ -11,6 +11,7 @@
 
 namespace erp\facade;
 
+use erp\Erp as baseErp;
 use think\Facade;
 
 /**
@@ -20,6 +21,6 @@ class Erp extends Facade
 {
     protected static function getFacadeClass()
     {
-        return 'erp\Erp';
+        return baseErp::class;
     }
 }

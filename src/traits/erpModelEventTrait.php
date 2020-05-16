@@ -3,6 +3,7 @@
 namespace erp\traits;
 
 use ReflectionClass;
+use ReflectionMethod;
 use think\helper\Str;
 use think\Model;
 use think\model\Relation;
@@ -32,11 +33,11 @@ trait erpModelEventTrait
                 $info = include $cacheFile;
                 $this->withModel = array_values($info);
             } else {
-//                $this->setAutoWith();
-//                if ($config['with_cache']) {
-//                    $content = '<?php '.PHP_EOL.'return '.var_export($this->withModel, true).';';
-//                    file_put_contents($cacheFile, $content);
-//                }
+                $this->setAutoWith();
+                if ($config['with_cache']) {
+                    $content = '<?php '.PHP_EOL.'return '.var_export($this->withModel, true).';';
+                    file_put_contents($cacheFile, $content);
+                }
             }
         }
         return $this->withModel;
@@ -62,7 +63,7 @@ trait erpModelEventTrait
     {
         $reflection = new ReflectionClass($this);
         if ($reflection->isSubclassOf(Model::class) && $reflection->isInstantiable()) {
-            $methods = $reflection->getMethods();
+            $methods = $reflection->getMethods(ReflectionMethod::IS_PUBLIC);
             foreach ($methods as $method) {
                 $name = Str::snake($method->getName());
                 $ignoreFile = [
