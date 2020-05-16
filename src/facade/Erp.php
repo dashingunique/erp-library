@@ -15,7 +15,7 @@ use erp\Erp as baseErp;
 use think\Facade;
 
 /**
- * @method array getGrant(string $app = '') static 获取应用导航数据
+ * @method baseErp getGrant(string $app = '') static 获取应用导航数据
  */
 class Erp extends Facade
 {
